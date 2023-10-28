@@ -1,0 +1,9 @@
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               version="2.1">
+    <jaxb:bindings schemaLocation="comptes.xsd" node="/xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="sn.esmt.mp2isi.comptesoap.generated"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+</jaxb:bindings>

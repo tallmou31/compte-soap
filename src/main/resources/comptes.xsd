@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.com/soap/account"
+           targetNamespace="http://example.com/soap/account"
+           elementFormDefault="qualified">
+
+    <!-- Request and Response Elements -->
+
+    <xs:element name="CreateAccountRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulaire" type="xs:string"/>
+                <xs:element name="montant" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CreateAccountResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numero" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DebitRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numero" type="xs:string"/>
+                <xs:element name="montant" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DebitResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CreditRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numero" type="xs:string"/>
+                <xs:element name="montant" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CreditResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetSoldeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numero" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetSoldeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="solde" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
